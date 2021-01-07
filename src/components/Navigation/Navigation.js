@@ -32,6 +32,8 @@ export const NavigationLink = styled(Link)`
   width:100%;
   display:flex;
   align-items:center;
+  font-size:16px;
+  font-weight:300;
   text-decoration:none;
 `
 export const AccountIcon = styled(Img)`
