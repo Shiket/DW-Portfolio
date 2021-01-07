@@ -1,1 +1,1 @@
-// export { MapImg, MapLink } from './HomeStyles/Location'
+export { PlFlag, EnFlag, FlagsWrapper } from './Navigation/NavigationFlags'
