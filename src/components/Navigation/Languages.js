@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
-import { PlFlag, RuFlag, EnFlag, FlagsWrapper } from "../../assets/styles/index"
+import { PlFlag, EnFlag, FlagsWrapper } from "../../assets/styles/index"
 
 let myMap = new Map([
   ["pl", <PlFlag />],

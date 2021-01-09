@@ -24,4 +24,12 @@ export const FlagsWrapper = styled.div`
     position:absolute;
     margin: 5px 0 0 10px;
 
+@media(max-width:1023px){
+    margin: 5px 0 0 28px;
+}
+@media(max-width: 639px){
+    bottom:0;
+    left:0;
+    margin: 0 0 5px 10px;
+}
 `
