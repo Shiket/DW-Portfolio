@@ -60,7 +60,7 @@ export const query = graphql`
     emailIcon: file(name: { eq: "navEmail" }) {
       childImageSharp {
         fixed(width: 23, quality: 100) {
-          ...GatsbyImageSharpFixed_tracedSVG
+          ...GatsbyImageSharpFixed_noBase64
         }
       }
     }
