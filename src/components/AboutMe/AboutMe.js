@@ -10,7 +10,10 @@ export const AboutMe = () => {
     return (
       <>
         <AvatarImg fluid={data.avatar.childImageSharp.fluid} alt="avatar"/>
-        <MainHeading image={data.beforeTitle.childImageSharp.fixed.src} >Hello, my name is Dominik &#128516;</MainHeading>
+        <MainHeading image={data.beforeTitle.childImageSharp.fixed.src}>
+           {intl.formatMessage({ id: "heading" })} &#128516;
+        </MainHeading>
+        
       </>
     )
 }
