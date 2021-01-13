@@ -5,11 +5,11 @@ export const AvatarImg = styled(Img)`
     margin: 0 auto;
     width:255px;
     height:284px;
-  @media (max-width: 1921px){
+
+  @media (max-width: 1920px){
     width:204px;
     height:228px;
   }
-
 `
 export const MainHeading = styled.p`
   text-align:center;
@@ -34,7 +34,7 @@ export const MainHeading = styled.p`
     width: 100%;
     height: 100%;
     font-size:25px;
-    padding:10px 5px;
+    padding:13px;
   }
   ::before{
     position: absolute;
