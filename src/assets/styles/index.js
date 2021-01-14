@@ -3,3 +3,4 @@ export { Author, AccountIcon, NavigationList, NavigationWrapper, NavigationItem,
 export { ContentWrapper } from './IndexStyles/indexStyles'
 export { AvatarImg, MainHeading} from './AboutMe/AboutMeStyles'
 export { Icon, IconLabel, ItemWrapper, IconsGridWrapper} from './AboutMe/IconsGrid'
+export { Description, Border } from './AboutMe/DescriptionStyles'

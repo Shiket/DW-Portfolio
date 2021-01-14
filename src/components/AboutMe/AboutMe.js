@@ -1,38 +1,9 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
-import { AvatarImg, MainHeading, Icon, IconLabel, ItemWrapper, IconsGridWrapper } from '../../assets/styles/index'
+import { AvatarImg, MainHeading, Icon, IconLabel, ItemWrapper, IconsGridWrapper, Border, Description } from '../../assets/styles/index'
 import styled from 'styled-components'
 
-export const Border = styled.div`
-  height:1px;
-  background-color: #303030;
-  width:70%;
-  width: ${props => (props.bottom ? "70%" : "55%")};
-  margin: 0 auto;
-
-  @media(max-width: 1023px){
-    width:100%;
-  }
-`
-export const Description = styled.p`
-  text-align:center;
-  width:90%;
-  margin: 20px auto;
-  font-size:20px;
-  line-height: 32px;
-  color: #303030;
-  padding: 1vh 10px;
-
-  @media(max-width: 1400px){
-    font-size:18px;
-  }
-  @media(max-width: 1023px){
-    font-size:18px;
-    text-align:left;
-    padding: 1vh 3px;
-  }
-`
 
 export const AboutMe = () => {
     const data = useStaticQuery(query);
