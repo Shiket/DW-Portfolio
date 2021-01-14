@@ -8,7 +8,7 @@ export const IconsGridWrapper = styled.div`
   width:100%;
   padding-left: 100px;
   margin: 80px auto 60px auto;
-  height:250px;
+  height:100%;
   justify-items: center;
   grid-column-gap: 30px;
 
@@ -27,7 +27,7 @@ export const IconsGridWrapper = styled.div`
     grid-template-rows: repeat(6, 50px);
     justify-items: flex-start;
     padding-left:20%;
-    margin: 50px auto 60px auto;
+    margin: 50px auto 40px auto;
   }
 
   @media(max-width:860px){

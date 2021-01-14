@@ -5,7 +5,7 @@ export const ContentWrapper = styled.div`
   margin-left:300px;
   padding-top:8vh;
 
-  @media (max-width: 1600px){
+  @media (max-width: 1921px){
     margin-left:250px;
   }
   @media (max-width: 1281px){

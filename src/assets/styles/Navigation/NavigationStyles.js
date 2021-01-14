@@ -37,7 +37,7 @@ export const NavigationWrapper = styled.nav`
   z-index:9999;
   position: fixed;
 
-  @media (max-width: 1600px){
+  @media (max-width: 1921px){
     width:250px;
   }
   @media (max-width: 1281px){
@@ -92,7 +92,7 @@ export const NavigationLink = styled(Link)`
     background-image: url(${({ image }) => image});
   }
 
-  @media (max-width: 1600px){
+  @media (max-width: 1921px){
     font-size: ${props => (props.navTitle ? "28px" : "16px")};
   }
   @media (max-width: 1281px){
