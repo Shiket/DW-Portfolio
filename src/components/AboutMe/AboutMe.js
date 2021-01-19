@@ -2,8 +2,6 @@ import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
 import { AvatarImg, MainHeading, Icon, IconLabel, ItemWrapper, IconsGridWrapper, Border, Description } from '../../assets/styles/index'
-import styled from 'styled-components'
-
 
 export const AboutMe = () => {
     const data = useStaticQuery(query);

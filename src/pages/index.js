@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import { Navigation, AboutMe } from '../components/index'
+import { Navigation, AboutMe, Projects } from '../components/index'
 import { ContentWrapper } from '../assets/styles/index'
 
 
@@ -11,6 +11,7 @@ const IndexPage = () => (
     <Navigation />
     <ContentWrapper>
       <AboutMe />
+      <Projects />
     </ContentWrapper>
   </>
 )
