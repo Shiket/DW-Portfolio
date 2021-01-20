@@ -48,8 +48,8 @@ export const AboutMe = () => {
         <Border/>
         <Description>Ukończyłem studia magisterskie na Uniwersytecie Ekonomicznym w Krakowie o kierunku Informatyka stosowana.<br />
         Zajmuję się frontendem, głównie biblioteką React, ostatnio gatsby, i w tym kierunku planuje dalszy rozwój. <br />
-        Moim głównym projektem w portfolio jest aplikacja "Football-app". <br />
-        Wszystkie moje projekty (wizualnie oraz kod) tworzyłem samodzielnie. <br />
+        Moim głównym projektem w portfolio jest aplikaja "JEAJSABDAJXZS". <br />
+        Wszystkie moje projekty (wizualnie oraz kod) tworzyłem samodzielnie. Dlatego są beznadziejne <br />
         trochę więcej tekstu by się przydalo placeholder lorem ip
         </Description>
         <Border bottom/>

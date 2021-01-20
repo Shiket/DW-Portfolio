@@ -8,8 +8,6 @@ import Img from 'gatsby-image'
 
 export const ProjectsWrapper = styled.section`
     height:1500px;
-    margin-top:100px;
-    padding-top:30px;
     background-color: #252525;
 `
 
@@ -38,22 +36,28 @@ export const ProjectName = styled.p`
     font-weight: 700;
     font-size: 55px;
     letter-spacing: -1px;
-    margin-left:100px;
+    margin-left:50px;
     color: #FFF;
 `
 export const ProjectDescripton = styled.p`
-    font-size:23px;
-    width:60%;
-    margin-left:200px;
+    font-size:21px;
+    width:100%;
+    margin-top:0;
     color: #fff;
 `
 export const ProjectImg = styled(Img)`
     width:100%;
-    height:436px;
+    height:100%;
 `
+export const StyledSVG = styled.svg`
+  margin: 80px 0 -4px -3px;
+`
+
 export const ProjectWrapper = styled.div`
     display:grid;
-    grid-template-columns: 2fr 1fr;
+    margin: 0 1% 0 3%;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap:20px;
     grid-template-rows: 100%;
 `
 
@@ -61,6 +65,13 @@ export const Projects = () => {
      const data = useStaticQuery(query);
     // const intl = useIntl()
     return (
+      <>
+      <StyledSVG 
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1652 109">
+          <path fill="#252525" d="M1652,0s-163,43.43-547.5,64.5c-292,16-379.84-48.93-713,0C320,75,0,109,0,109H1652Z"/>
+          <path fill="#252525" d="M2,74.24s39,30.36,222,11c104-11,67.33,23.76,67.33,23.76H2Z"/>
+      </StyledSVG>
       <ProjectsWrapper>
           <SectionName>PROJECTS</SectionName>
           <Line />
@@ -72,15 +83,15 @@ export const Projects = () => {
                 Wszystkie informacje, wyniki i zespoły aktualizowane są automatycznie. Zalogowani użytkownicy mogą dodawać zespoły do ulubionych oraz je usuwać.
             </ProjectDescripton>
         </ProjectWrapper>
-        
       </ProjectsWrapper>
+      </>
     )
 }
 export const query = graphql`
   {
     football: file(name: { eq: "footballapp" }) {
       childImageSharp {
-        fluid(maxWidth: 2027, maxHeight: 871, quality:100) {
+        fluid(maxWidth: 1919, maxHeight: 871, quality:100) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
