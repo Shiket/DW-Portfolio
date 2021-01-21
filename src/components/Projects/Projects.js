@@ -1,70 +1,82 @@
 import React from "react"
 // import { useIntl } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
-//import { } from '../../assets/styles/index'
+import { ProjectIcon, ProjectsWrapper, SectionName, StyledSVG, Line } from '../../assets/styles/index'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-
-export const ProjectsWrapper = styled.section`
-    height:1500px;
-    background-color: #252525;
-`
-
-export const SectionName = styled.div`
-    height:58px;
-    padding-left:2%;
-    margin-left:80%;
-    position:relative;
-    color: #fff;
-    font-weight:700;
-    font-size:38px;
-    letter-spacing: -1px;
-    background-color: #E04040;
-    display:flex;
-    align-items:center;
-`
-
-export const Line = styled.div`
-    height:1px;
-    background-color: #fff;
-    margin: 70px 0 80px auto;
-    width:85%;
-`
-
-export const ProjectName = styled.p`
-    font-weight: 700;
-    font-size: 55px;
-    letter-spacing: -1px;
-    margin-left:50px;
-    margin-bottom: 30px;
-    color: #FFF;
-`
-export const ProjectDescripton = styled.p`
-    font-size:22px;
-    width:100%;
-    margin-top:0;
-    grid-row: 1/2;
-    color: #fff;
-`
-export const ProjectImg = styled(Img)`
-    width:100%;
-    height:100%;
-    grid-row: span 2/3;
-`
-export const StyledSVG = styled.svg`
-  margin: 80px 0 -4px -3px;
-`
 
 export const ProjectWrapper = styled.div`
     display:grid;
     margin: 0 1% 0 3%;
     grid-template-columns: 5fr 3fr;
     grid-column-gap:25px;
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 300px 110px 1fr;
+
+    @media(max-width: 2200px){
+      grid-template-rows: 250px 110px 1fr;
+      grid-template-columns: 4fr 3fr;
+    }
+    @media(max-width: 2000px){
+      grid-template-rows: 280px 170px 50px;
+    }
+    
+    @media(max-width: 1750px){
+      grid-template-rows: 500px 200px 110px 100px;
+      grid-template-columns: 90%;
+      justify-content:center;
+    grid-column-gap:0px;
+    }
 `
 
+export const ProjectName = styled.p`
+    font-weight: 700;
+    font-size: 55px;
+    margin: 0 0 40px 3%;
+    letter-spacing: -1px;
+    color: #FFF;
+    
+    @media(max-width: 1750px){
+      width:100%;
+      font-size:45px;
+      text-align:center;
+      margin: 0 0 50px 0;
+      padding-left:32px;
+    }
+`
+export const ProjectImg = styled(Img)`
+    width:100%;
+    height:100%;
+    grid-row: 1/4;
+    @media(max-width: 2000px){
+      width:890px;
+      height:400px;
+      background-size: cover;
+      grid-row: 1/3;
+    }
+    @media(max-width: 1750px){
+     width:100%;
+     height:100%;
+     grid-row: 1/2;
+    }
+`
+
+export const ProjectDescripton = styled.p`
+    font-size:22px;
+    width:100%;
+    margin-top:0;
+    grid-row: 1/2;
+    color: #fff;
+
+    @media(max-width: 2200px){
+      font-size:21px;
+    }
+    
+    @media(max-width: 1750px){
+      grid-row: 2/3;
+    }
+`
 export const ProjectTechnologies = styled.div`
-    height: 120px;
+    height: 110px;
     width:100%;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -72,20 +84,62 @@ export const ProjectTechnologies = styled.div`
     display:flex;
     justify-content:space-around;
     align-items:center;
+    
+    @media(max-width: 1750px){
+      grid-row: 3/4;
+    }
 `
 export const IconWrapper = styled.div`
-  width:60px;
-  height:90px;
-  margin-top:12px;
-  display:flex;
-  flex-direction:column;
+    height:86px;
+    margin-top:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color: #fff;
+`
+export const Heading = styled.p`
+    font-size:35px;
+    margin-top:55px;
+    color: #fff;
+    font-weight:700;
+
+    @media(max-width: 2200px){
+      margin-top:30px;
+      font-size:32px;
+      text-align:center;
+    }
+`
+export const VisitButton = styled.a`
+  color: #fff;
+  background-color: #E04040;
+  height:50px;
+  width:250px;
+  font-weight: 700;
+  font-size:38px;
+  margin: auto auto;
+  display: flex;
   align-items:center;
   justify-content:center;
-  color: #fff;
-`
-export const Icon = styled(Img)`
-  height:35px;
-  width:35px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+
+  @media(max-width: 2200px){
+      height:38px;
+      font-size:32px
+    }
+
+  @media(max-width: 2000px){
+    grid-column-start: 1;
+    grid-row: 3/4;
+    height:45px;
+    font-size:38px;
+  }
+  
+  @media(max-width: 1750px){
+    grid-row: 4/5;
+  }
+
 `
 
 export const Projects = () => {
@@ -105,33 +159,37 @@ export const Projects = () => {
         <ProjectName>FOOTBALL-APP</ProjectName>
         <ProjectWrapper>
             <ProjectImg fluid={data.football.childImageSharp.fluid} />
-            <ProjectDescripton>Aplikacja wykorzystująca zewnętrzne API (footbalDatabase API). <br/>
-                Stworzona w React, umożliwia sprawdzenie podstawowych informacji (ostatnie, nadchodzące mecze, witryna zespołu, historia itp.) o każdej drużynie z sześciu czołowych lig w Europie.<br />
+            <ProjectDescripton>Aplikacja wykorzystująca zewnętrzne API (footbalDatabase API).
+                Stworzona w React, umożliwia sprawdzenie podstawowych informacji (ostatnie, nadchodzące mecze, witryna zespołu, historia itp.) o każdej drużynie z sześciu czołowych lig w Europie.
                 Wszystkie informacje, wyniki i zespoły aktualizowane są automatycznie. Zalogowani użytkownicy mogą dodawać zespoły do ulubionych oraz je usuwać.
+                <Heading>TECHNOLOGIES USED:</Heading>
             </ProjectDescripton>
             <ProjectTechnologies>
               <IconWrapper>
-                <Icon fluid={data.jsIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid}/>
                 <p>JavaScript</p>
               </IconWrapper>
               <IconWrapper>
-                <Icon fluid={data.reactIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.reactIcon.childImageSharp.fluid}/>
                 <p>React</p>
               </IconWrapper>
               <IconWrapper>
-                <Icon fluid={data.styledIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid}/>
                 <p>Styled </p>
               </IconWrapper>
               <IconWrapper>
-                <Icon fluid={data.htmlIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid}/>
                 <p>HTML</p>
               </IconWrapper>
               <IconWrapper>
-                <Icon fluid={data.firebaseIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.firebaseIcon.childImageSharp.fluid}/>
                 <p>Firebase</p>
               </IconWrapper>
             </ProjectTechnologies>
+            <VisitButton>VISIT</VisitButton>
         </ProjectWrapper>
+        
+        <Line bottom />
       </ProjectsWrapper>
       </>
     )
