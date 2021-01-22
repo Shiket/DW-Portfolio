@@ -39,11 +39,9 @@ export const ProjectContainer = styled.div`
     @media(max-width: 915px){
       grid-template-rows: 320px 250px 110px 100px;
     }
-    
     @media(max-width: 760px){
       grid-template-rows: 260px 300px 110px 100px;
     }
-    
     @media(max-width: 540px){
       grid-template-rows: 300px 110px 100px;
     }
@@ -65,15 +63,9 @@ export const ProjectName = styled.p`
       margin: 0 0 50px 0;
       padding-left:32px;
     }
-
     @media(max-width: 1500px){
-      width:100%;
-      font-size:45px;
-      text-align:center;
       margin: 50px 0 50px 0;
-      padding-left:32px;
     }
-    
     @media(max-width: 540px){
       text-align:left;
       padding-left:2%;
@@ -87,7 +79,6 @@ export const ProjectImg = styled(Img)`
     @media(max-width: 2000px){
       width:890px;
       height:400px;
-      background-size: cover;
       grid-row: 1/3;
     }
     @media(max-width: 1750px){
@@ -99,33 +90,22 @@ export const ProjectImg = styled(Img)`
     @media(max-width: 1500px){
       width:930px;
       height:410px;
-      margin: 0 auto;
-     grid-row: 1/2;
     }
-    
     @media(max-width: 1250px){
       width:780px;
       height:350px;
-      margin: 0 auto;
-     grid-row: 1/2;
     }
-    
     @media(max-width: 915px){
       width:640px;
       height:290px;
-      margin: 0 auto;
-     grid-row: 1/2;
     }
     @media(max-width: 760px){
       width:470px;
       height: 220px;
-      margin: 0 auto;
-     grid-row: 1/2;
     }
     @media(max-width: 540px){
       display:none;
     }
-
 `
 
 export const ProjectDescripton = styled.p`
@@ -138,7 +118,6 @@ export const ProjectDescripton = styled.p`
     @media(max-width: 2200px){
       font-size:21px;
     }
-    
     @media(max-width: 1750px){
       grid-row: 2/3;
     }
@@ -156,11 +135,10 @@ export const ProjectTechnologies = styled.div`
     display:flex;
     justify-content:space-around;
     align-items:center;
-    
+
     @media(max-width: 1750px){
       grid-row: 3/4;
     }
-    
     @media(max-width: 540px){
       grid-row: 2/3;
     }
@@ -173,10 +151,6 @@ export const IconWrapper = styled.div`
     align-items:center;
     justify-content:center;
     color: #fff;
-    @media(max-width:540px){
-      flex-wrap:wrap;
-      order:1;
-    }
 `
 export const Heading = styled.p`
     font-size:35px;

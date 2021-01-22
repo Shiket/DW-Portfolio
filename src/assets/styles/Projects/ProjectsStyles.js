@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 export const ProjectsWrapper = styled.section`
-    height:100%;
+    height:1500px;
     background-color: #252525;
 `
 
@@ -26,7 +26,7 @@ export const Line = styled.div`
     }
     @media(max-width: 1500px){
         margin: ${props => (props.bottom ? "60px 0 80px auto;" : "70px 0 50px auto")};
-        display: ${props => (props.bottom ? "block" : "none")};
+        display: ${props => (props.bottom ? "none" : "none")};
     }
 `
 
