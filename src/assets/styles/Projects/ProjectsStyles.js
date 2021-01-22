@@ -2,12 +2,16 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 export const ProjectsWrapper = styled.section`
-    height:1500px;
+    height:100%;
     background-color: #252525;
 `
 
 export const StyledSVG = styled.svg`
   margin: 80px 0 -4px -3px;
+
+  @media(max-width: 1500px){
+      display:none;
+  }
 `
 
 export const Line = styled.div`
@@ -19,6 +23,10 @@ export const Line = styled.div`
 
     @media(max-width: 2000px){
         margin: ${props => (props.bottom ? "60px 0 80px auto;" : "70px 0 80px auto")};
+    }
+    @media(max-width: 1500px){
+        margin: ${props => (props.bottom ? "60px 0 80px auto;" : "70px 0 50px auto")};
+        display: ${props => (props.bottom ? "block" : "none")};
     }
 `
 
@@ -34,6 +42,17 @@ export const SectionName = styled.div`
     background-color: #E04040;
     display:flex;
     align-items:center;
+
+    @media(max-width:1500px){
+        margin:70px 0 0 70%;
+        height: 50px;
+        font-size:32px;
+    }
+    @media(max-width:915px){
+        margin:70px 0 0 0%;
+        height: 50px;
+        font-size:32px;
+    }
 `
 
 export const ProjectIcon = styled(Img)`
