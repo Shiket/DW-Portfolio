@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 export const ProjectsWrapper = styled.section`
-    height:1500px;
+    height:100%;
     background-color: #252525;
 `
 

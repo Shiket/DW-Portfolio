@@ -11,6 +11,7 @@ export const ProjectContainer = styled.div`
     grid-template-columns: 5fr 3fr;
     grid-column-gap:25px;
     grid-template-rows: 300px 110px 1fr;
+    direction: ${props => (props.reverseOrder ? "rtl" : "lrt")};
 
     @media(max-width: 2200px){
       grid-template-rows: 250px 110px 1fr;
@@ -52,7 +53,8 @@ export const ProjectContainer = styled.div`
 export const ProjectName = styled.p`
     font-weight: 700;
     font-size: 55px;
-    margin: 0 0 40px 3%;
+    margin: ${props => (props.right ? "0 3% 40px 0" : "0 0 40px 3%")};
+    text-align: ${props => (props.right ? "right" : "left")};
     letter-spacing: -1px;
     color: #FFF;
 
@@ -114,6 +116,7 @@ export const ProjectDescripton = styled.p`
     margin-top:0;
     grid-row: 1/2;
     color: #fff;
+    direction: ltr;
 
     @media(max-width: 2200px){
       font-size:21px;
@@ -162,7 +165,7 @@ export const Heading = styled.p`
       margin-top:30px;
       font-size:32px;
       text-align:center;
-    }  
+    }
     @media(max-width: 915px){
       font-size:28px;
       text-align:left;
@@ -186,14 +189,12 @@ export const VisitButton = styled.a`
       height:38px;
       font-size:32px
     }
-
   @media(max-width: 2000px){
     grid-column-start: 1;
     grid-row: 3/4;
     height:45px;
     font-size:38px;
   }
-  
   @media(max-width: 1750px){
     grid-row: 4/5;
   }
@@ -201,7 +202,6 @@ export const VisitButton = styled.a`
     height:35px;
     font-size: 33px;
   }
-  
   @media(max-width: 540px){
     grid-row:3/4;
   }
@@ -256,6 +256,40 @@ export const Projects = () => {
         </ProjectContainer>
         
         <Line bottom />
+        <ProjectName right>KP CLAUDIA</ProjectName>
+        <ProjectContainer reverseOrder >
+            <ProjectImg fluid={data.kpclaudia.childImageSharp.fluid} />
+            <ProjectDescripton>Witryna Kp Claudia stworzona przy pomocy frameworka Gatsby,
+                który w przeciwieństwie do React'a wspiera pozycjonowanie w Google oraz za pomoca GraphQL optymalizuje wczytywanie grafiki na stronie.
+                Kp Claudia jest witryną wielojęzyczna dzięki czemu jest dostępna dla szarszego grona odbiorców.
+                <Heading>TECHNOLOGIES USED:</Heading>
+            </ProjectDescripton>
+            <ProjectTechnologies>
+              <IconWrapper>
+                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid}/>
+                <p>JavaScript</p>
+              </IconWrapper>
+              <IconWrapper>
+                <ProjectIcon fluid={data.gatsbyIcon.childImageSharp.fluid}/>
+                <p>Gatsby</p>
+              </IconWrapper>
+              <IconWrapper>
+                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid}/>
+                <p>Styled </p>
+              </IconWrapper>
+              <IconWrapper>
+                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid}/>
+                <p>HTML</p>
+              </IconWrapper>
+              <IconWrapper>
+                <ProjectIcon fluid={data.graphqlIcon.childImageSharp.fluid}/>
+                <p>GraphQL</p>
+              </IconWrapper>
+            </ProjectTechnologies>
+            <VisitButton>VISIT</VisitButton>
+        </ProjectContainer>
+        
+        <Line bottom />
       </ProjectsWrapper>
       </>
     )
@@ -269,7 +303,28 @@ export const query = graphql`
         }
       }
     }
+    kpclaudia: file(name: { eq: "kpclaudia" }) {
+      childImageSharp {
+        fluid(maxWidth: 1919, maxHeight: 871, quality:100) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
     reactIcon: file(name: { eq: "reactIcon" }) {
+      childImageSharp {
+        fluid(maxWidth: 96, maxHeight: 96, quality:100) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    graphqlIcon: file(name: { eq: "graphqlLogo" }) {
+      childImageSharp {
+        fluid(maxWidth: 96, maxHeight: 96, quality:100) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    gatsbyIcon: file(name: { eq: "gatsby-icon" }) {
       childImageSharp {
         fluid(maxWidth: 96, maxHeight: 96, quality:100) {
           ...GatsbyImageSharpFluid_noBase64
