@@ -2,3 +2,5 @@
  export { Languages } from './Navigation/Languages'
  export { AboutMe } from './AboutMe/AboutMe'
  export { Projects } from './Projects/Projects'
+ export { KpClaudiaProject } from './Projects/KpClaudia'
+ export { FootballProject } from './Projects/Football'
