@@ -2,6 +2,13 @@ import React from "react"
 // import { useIntl } from "gatsby-plugin-intl"
 import { ProjectsWrapper, SectionName, StyledSVG, Line, ProjectName} from '../../assets/styles/index'
 import { KpClaudiaProject, FootballProject} from '../index'
+import styled from 'styled-components'
+
+export const BigBorder = styled.div`
+  width:100%;
+  height:1080px;
+  background-color: #E04040;
+`
 export const Projects = () => {
     // const intl = useIntl()
     return (
@@ -20,7 +27,6 @@ export const Projects = () => {
           <Line bottom />
           <ProjectName right>KP CLAUDIA</ProjectName>
           <KpClaudiaProject />
-          <Line bottom />
       </ProjectsWrapper>
       </>
     )

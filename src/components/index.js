@@ -4,3 +4,4 @@
  export { Projects } from './Projects/Projects'
  export { KpClaudiaProject } from './Projects/KpClaudia'
  export { FootballProject } from './Projects/Football'
+ export { Skills } from './Skills/Skills'

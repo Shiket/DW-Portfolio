@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 export const ProjectsWrapper = styled.section`
     height:100%;
     background-color: #252525;
+    padding-bottom:50px;
 `
 
 export const StyledSVG = styled.svg`

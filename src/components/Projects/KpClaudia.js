@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import { ProjectIcon, ProjectContainer, IconWrapper, ProjectImg,
-   ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from '../../assets/styles/index'
+    ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from '../../assets/styles/index'
 
 export const KpClaudiaProject = () => {
     const data = useStaticQuery(query);
