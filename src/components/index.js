@@ -5,3 +5,4 @@
  export { KpClaudiaProject } from './Projects/KpClaudia'
  export { FootballProject } from './Projects/Football'
  export { Skills } from './Skills/Skills'
+ export { BasicSkills, OtherSkills, MainSkills } from './Skills/Technologies'
