@@ -27,7 +27,10 @@ export const Line = styled.div`
     }
     @media(max-width: 1500px){
         margin: ${props => (props.bottom ? "60px 0 80px auto;" : "70px 0 50px auto")};
-        display: ${props => (props.bottom ? "none" : "none")};
+        display: none;
+    }
+    @media(max-width: 1500px){
+        margin: ${props => (props.bottom ? "60px 0 80px auto;" : "70px 0 100px auto")};
     }
 `
 
@@ -45,12 +48,12 @@ export const SectionName = styled.div`
     align-items:center;
 
     @media(max-width:1500px){
-        margin:70px 0 0 70%;
+        margin:0 0 0 70%;
         height: 50px;
         font-size:32px;
     }
-    @media(max-width:915px){
-        margin:70px 0 0 0%;
+    @media(max-width:1023px){
+        margin:0 0 0 0%;
         height: 50px;
         font-size:32px;
     }

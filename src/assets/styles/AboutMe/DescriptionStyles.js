@@ -7,6 +7,9 @@ width:70%;
 width: ${props => (props.bottom ? "70%" : "55%")};
 margin: 0 auto;
 
+@media(max-width: 1500px){
+  margin-bottom: ${props => (props.bottom ? "50px" : "0")};
+}
 @media(max-width: 1023px){
   width:100%;
 }
