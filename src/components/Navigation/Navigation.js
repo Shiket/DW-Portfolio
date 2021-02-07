@@ -12,8 +12,8 @@ export const Navigation = () => {
       <NavigationWrapper>
         <Languages />
         <NavigationList>
-          <NavigationItem navTitle>
-            <NavigationLink image={data.afterName.childImageSharp.fixed.src} navTitle to="/">
+          <NavigationItem title="true">
+            <NavigationLink image={data.afterName.childImageSharp.fixed.src} title="true" to="/">
               <ButtonName>DOMINIK WRONA</ButtonName>
               <ShortName>DW</ShortName>
             </NavigationLink>

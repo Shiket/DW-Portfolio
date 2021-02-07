@@ -30,6 +30,7 @@ export const AccountIcon = styled(Img)`
     }
 `
 export const NavigationList = styled.ul``
+
 export const NavigationWrapper = styled.nav`
   width:300px;
   background-color:#303030;
@@ -53,17 +54,17 @@ export const NavigationWrapper = styled.nav`
 
 export const NavigationItem = styled.li`
   height: 100%;
-  margin: ${props => (props.navTitle ? "10vh 0 15vh 0" : "30px 0 30px 0")};
-  padding-left: ${props => (props.navTitle ? "0px" : "30px")};
-  background-color: ${props => (props.navTitle ? "#E04040" : "#00A5A5")};
+  margin: ${props => (props.title ? "10vh 0 15vh 0" : "30px 0 30px 0")};
+  padding-left: ${props => (props.title ? "0px" : "30px")};
+  background-color: ${props => (props.title ? "#E04040" : "#00A5A5")};
 
 
   @media (max-height:650px){
-    margin: ${props => (props.navTitle ? "8vh 0 10vh 0" : "15px 0 20px 0")};
+    margin: ${props => (props.title ? "8vh 0 10vh 0" : "15px 0 20px 0")};
   }
 
   @media (max-width: 1023px){
-    padding-left: ${props => (props.navTitle ? "0px" : "0px")};
+    padding-left: ${props => (props.title ? "0px" : "0px")};
   }
 `
 
@@ -76,9 +77,9 @@ export const NavigationLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: ${props => (props.navTitle ? "32px" : "18px")};
-  font-weight: ${props => (props.navTitle ? "700" : "300")};
-  justify-content: ${props => (props.navTitle ? "center" : "flex-start")};
+  font-size: ${props => (props.title ? "32px" : "18px")};
+  font-weight: ${props => (props.title ? "700" : "300")};
+  justify-content: ${props => (props.title ? "center" : "flex-start")};
   text-decoration: none;
 
   ::after {
@@ -93,13 +94,13 @@ export const NavigationLink = styled(Link)`
   }
 
   @media (max-width: 1921px){
-    font-size: ${props => (props.navTitle ? "28px" : "16px")};
+    font-size: ${props => (props.title ? "28px" : "16px")};
   }
   @media (max-width: 1281px){
-    font-size: ${props => (props.navTitle ? "23px" : "16px")};
+    font-size: ${props => (props.title ? "23px" : "16px")};
   }
   @media (max-width:1023px){
-    font-size: ${props => (props.navTitle ? "19px" : "14px")};
+    font-size: ${props => (props.title ? "19px" : "14px")};
     flex-direction:column;
     align-items:center;
     ::after{
@@ -107,7 +108,7 @@ export const NavigationLink = styled(Link)`
     }
   }
   @media(max-width: 639px){
-      font-size: ${props => (props.navTitle ? "27px" : "14px")};
+      font-size: ${props => (props.title ? "27px" : "14px")};
       flex-direction:row;
       justify-content:center;
     }

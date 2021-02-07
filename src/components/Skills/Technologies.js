@@ -8,8 +8,8 @@ export const BasicSkills = () => {
     return(
         <TechnologiesWrapper>
             {data.basicSkills.edges.map(({ node }, index) => (
-                <Ability>
-                    <SkillIcon key={index} fluid={node.childImageSharp.fluid} alt="icon" />
+                <Ability key={index}>
+                    <SkillIcon fluid={node.childImageSharp.fluid} alt="icon" />
                     <p>{basic[index]}</p>
                 </Ability>
                 ))}
@@ -23,8 +23,8 @@ export const OtherSkills = () => {
     return(
         <TechnologiesWrapper>
             {data.otherSkills.edges.map(({ node }, index) => (
-                <Ability>
-                    <SkillIcon key={index} fluid={node.childImageSharp.fluid} alt="icon" />
+                <Ability key={index}>
+                    <SkillIcon fluid={node.childImageSharp.fluid} alt="icon" />
                     <p>{others[index]}</p>
                 </Ability>
                 ))}
@@ -39,8 +39,8 @@ export const MainSkills = () => {
       <>
         <TechnologiesWrapper>
             {data.skillIcons.edges.map(({ node }, index) => (
-                <Ability>
-                    <SkillIcon key={index} fluid={node.childImageSharp.fluid} alt="icon" />
+                <Ability key={index}>
+                    <SkillIcon fluid={node.childImageSharp.fluid} alt="icon" />
                     <p>{technologies[index]}</p>
                 </Ability>
                 ))}

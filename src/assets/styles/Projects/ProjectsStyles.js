@@ -214,8 +214,9 @@ export const IconWrapper = styled.div`
     justify-content:center;
     color: #fff;
 `
-export const Heading = styled.p`
+export const Heading = styled.span`
     font-size:35px;
+    display:block;
     margin-top:55px;
     color: #fff;
     font-weight:700;
