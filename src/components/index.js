@@ -5,6 +5,6 @@
  export { KpClaudiaProject } from './Projects/KpClaudia'
  export { FootballProject } from './Projects/Football'
  export { Skills } from './Skills/Skills'
- export { BasicSkills, OtherSkills, MainSkills } from './Skills/Technologies'
+ //export { BasicSkills, OtherSkills, MainSkills } from './Skills/Technologies'
  export { Contact } from './Contact/Contact'
  export { ContactForm } from './Contact/Form'
