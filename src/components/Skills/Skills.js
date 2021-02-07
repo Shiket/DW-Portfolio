@@ -8,6 +8,7 @@ export const Skills = () => {
   const others = ['Git', 'Internationalization', 'Adobe Xd', 'Adobe Photoshop'];
   const basic = ['GraphQL', 'TypeScript', 'Firebase', 'Redux'];
 
+   const data = useStaticQuery(query);
     return (
       <>
       <SkillsWrapper>
