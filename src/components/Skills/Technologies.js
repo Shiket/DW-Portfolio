@@ -35,7 +35,7 @@ export const OtherSkills = () => {
 export const MainSkills = () => {
     const data = useStaticQuery(query);
     const technologies = ['JavaScirpt', 'React', 'Gatsby', 'HTML', 'CSS', 'Styled-Components', 'Bootstrap'];
-    return (
+    return(
       <>
         <TechnologiesWrapper>
             {data.skillIcons.edges.map(({ node }, index) => (
