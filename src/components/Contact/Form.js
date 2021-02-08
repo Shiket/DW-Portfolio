@@ -55,25 +55,14 @@ export const StyledButton = styled.button`
         }}
 
         onSubmit={(values, { setSubmitting }) => {
-            // alert(JSON.stringify(values))
                 try {
-                   axios.post('/.netlify/functions/sendgrid', values)
+                  axios.post('/.netlify/functions/sendgrid', values)
                   setSubmitting(false);
                 } catch (e) {
                   console.error(e)
                   alert('Error:  Your message could not be sent')
                   setSubmitting(false)
                 }
-              
-        //      axios.post('http://localhost:5001/portfolio-dw/us-central1/sendEmail', values)
-        //     .then((res) => {
-        //         console.log(res);
-        //          setSubmitting(false);
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //         setSubmitting(false)
-        //     })
          }}
         >
 
