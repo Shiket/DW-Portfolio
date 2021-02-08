@@ -1,13 +1,7 @@
 [build]
     functions = "lambda"
 
-[[redirects]]
-  from = "/"
-  to = "/"
-  status = 200
-
 [[headers]]
-  for = "/"
-
-[headers.values]
-    Access-Control-Allow-Origin = "*"
+   for = "/*"
+   [headers.values]
+      Access-Control-Allow-Origin = "*"
