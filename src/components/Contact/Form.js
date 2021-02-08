@@ -57,14 +57,15 @@ export const StyledButton = styled.button`
         onSubmit={(values, { setSubmitting }) => {
             // alert(JSON.stringify(values))
                 try {
-                   axios.post('/.netlify/functions/sendgrid',
+                   axios.post('https://dwportfolio.netlify.app/',
                     {
-                      message: 'My email message, in the real world this would probably come from form data '
+                      message: 'My email message, in the real world this would probably come from form data ',
+                      name: 'Dominik',
+                      email: 'dwrona9@gmail.com'
                     }
                     
                   )
                   setSubmitting(false);
-                  alert('Thank you, your message was sent successfully!')
                 } catch (e) {
                   console.error(e)
                   alert('Error:  Your message could not be sent')

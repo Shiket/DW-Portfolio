@@ -1,44 +1,35 @@
 const client = require("@sendgrid/mail")
+exports.handler = async function(event, context) {
 
-function sendEmail(client, message, senderEmail, senderName) {
-  return new Promise((fulfill, reject) => {
-    const data = {
-      from: {
-        email: senderEmail,
-        name: senderName
-      },
-      subject: 'Netlify Function - Sendgrid Email',
-      to: 'dwrona9@gmail.com',
-      html: `Hey, you\'ve sent an email from Netlify Functions<br/>Message: ${message}`
-    }
-
-    client
-      .send(data)
-      .then(([response, body]) => {
-        fulfill(response)
-      })
-      .catch(error => reject(error))
-  })
-}
-
-exports.handler = function(event, context, callback) {
-  const {
-    SENDGRID_API_KEY,
-    SENDGRID_SENDER_EMAIL,
-    SENDGRID_SENDER_NAME
-  } = process.env
-
-  const body = JSON.parse(event.body)
-  const message = body.message
+  const { SENDGRID_API_KEY, SENDGRID_SENDER_EMAIL } = process.env
 
   client.setApiKey(SENDGRID_API_KEY)
+  
+  const { message, email, name } = JSON.parse(event.body);
 
-  sendEmail(
-    client,
-    message,
-    SENDGRID_SENDER_EMAIL,
-    SENDGRID_SENDER_NAME
-  )
-  .then(response => callback(null, { statusCode: response.statusCode }))
-  .catch(err => callback(err, null))
+  const data = {
+    to: SENDGRID_SENDER_EMAIL,
+    from: SENDGRID_SENDER_EMAIL,
+    subject: `New message from ${name} (${email})`,
+    html: message,
+  };
+
+    try {
+      client.send(data);
+      return {
+        statusCode:200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        },
+        body:'message sent',
+      };
+    }
+    catch (err) {
+      return {
+        statusCode:err.code,
+        body: JSON.stringify({msg: err.message}),
+      };
+    }
+
 }
