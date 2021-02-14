@@ -7,7 +7,7 @@ export const KpClaudiaProject = () => {
     const data = useStaticQuery(query);
     return(
         <ProjectContainer reverseOrder >
-            <ProjectImg fluid={data.kpclaudia.childImageSharp.fluid} />
+            <ProjectImg fluid={data.kpclaudia.childImageSharp.fluid} alt="project" />
             <ProjectDescripton>Witryna Kp Claudia stworzona przy pomocy frameworka Gatsby,
                 który w przeciwieństwie do React'a wspiera pozycjonowanie w Google oraz za pomoca GraphQL optymalizuje wczytywanie grafiki na stronie.
                 Kp Claudia jest witryną wielojęzyczna dzięki czemu jest dostępna dla szarszego grona odbiorców.
@@ -15,27 +15,27 @@ export const KpClaudiaProject = () => {
             </ProjectDescripton>
             <ProjectTechnologies>
             <IconWrapper>
-                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid} alt="icon"/>
                 <p>JavaScript</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.gatsbyIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.gatsbyIcon.childImageSharp.fluid} alt="icon"/>
                 <p>Gatsby</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid} alt="icon"/>
                 <p>Styled </p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid} alt="icon"/>
                 <p>HTML</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.graphqlIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.graphqlIcon.childImageSharp.fluid} alt="icon"/>
                 <p>GraphQL</p>
             </IconWrapper>
             </ProjectTechnologies>
-            <VisitButton>VISIT</VisitButton>
+            <VisitButton as="a" href="https://www.nocleg-wieliczka.com/" rel="noopener noreferrer">VISIT</VisitButton>
         </ProjectContainer>
     )
 }

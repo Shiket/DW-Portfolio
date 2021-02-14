@@ -7,7 +7,7 @@ export const FootballProject = () => {
     const data = useStaticQuery(query);
     return(
         <ProjectContainer>
-            <ProjectImg fluid={data.football.childImageSharp.fluid} />
+            <ProjectImg fluid={data.football.childImageSharp.fluid} alt="project"/>
             <ProjectDescripton>Aplikacja wykorzystująca zewnętrzne API (footbalDatabase API).
                 Stworzona w React, umożliwia sprawdzenie podstawowych informacji (ostatnie, nadchodzące mecze, witryna zespołu, historia itp.) o każdej drużynie z sześciu czołowych lig w Europie.
                 Wszystkie informacje, wyniki i zespoły aktualizowane są automatycznie. Zalogowani użytkownicy mogą dodawać zespoły do ulubionych oraz je usuwać.
@@ -15,27 +15,27 @@ export const FootballProject = () => {
             </ProjectDescripton>
             <ProjectTechnologies>
             <IconWrapper>
-                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.jsIcon.childImageSharp.fluid} alt="Icon"/>
                 <p>JavaScript</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.reactIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.reactIcon.childImageSharp.fluid} alt="Icon"/>
                 <p>React</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.styledIcon.childImageSharp.fluid} alt="Icon"/>
                 <p>Styled </p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.htmlIcon.childImageSharp.fluid} alt="Icon"/>
                 <p>HTML</p>
             </IconWrapper>
             <IconWrapper>
-                <ProjectIcon fluid={data.firebaseIcon.childImageSharp.fluid}/>
+                <ProjectIcon fluid={data.firebaseIcon.childImageSharp.fluid} alt="Icon"/>
                 <p>Firebase</p>
             </IconWrapper>
             </ProjectTechnologies>
-            <VisitButton>VISIT</VisitButton>
+            <VisitButton as="a" href="https://shiket.github.io/Football-app/" rel="noopener noreferrer">VISIT</VisitButton>
         </ProjectContainer>
     )
 }
