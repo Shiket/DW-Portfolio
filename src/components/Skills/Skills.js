@@ -6,12 +6,11 @@ import { SectionName, SectionTitle, SkillsWrapper, Ability, SkillIcon, Technolog
 export const Skills = () => {
   const technologies = ['JavaScirpt', 'React', 'Gatsby', 'HTML', 'CSS', 'Styled-Components', 'Bootstrap'];
   const others = ['Git', 'Internationalization', 'Adobe Xd', 'Adobe Photoshop'];
-  const basic = ['GraphQL', 'TypeScript', 'Firebase', 'Redux'];
+  const basic = [ 'TypeScript', 'GraphQL', 'Firebase', 'Redux'];
 
    const data = useStaticQuery(query);
     return (
-      <>
-      <SkillsWrapper>
+      <SkillsWrapper id="skills">
         <SectionName>SKILLS</SectionName>
         <SectionTitle>TECHNOLOGIES I KNOW</SectionTitle>
         <TechnologiesWrapper>
@@ -41,7 +40,6 @@ export const Skills = () => {
                 ))}
         </TechnologiesWrapper>
       </SkillsWrapper>
-      </>
     )
 }
 

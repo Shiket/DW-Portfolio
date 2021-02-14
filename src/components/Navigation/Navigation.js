@@ -19,25 +19,25 @@ export const Navigation = () => {
             </NavigationLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/">
+            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/#about">
               <AccountIcon  fixed={data.accountIcon.childImageSharp.fixed} alt="account icon" />
               <ButtonName>{intl.formatMessage({ id: "about_me" })}</ButtonName>
             </NavigationLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/">
+            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/#projects">
               <AccountIcon fixed={data.projectsIcon.childImageSharp.fixed} alt="projects icon" />
               <ButtonName>{intl.formatMessage({ id: "projects" })}</ButtonName>
             </NavigationLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/">
+            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/#skills">
               <AccountIcon  fixed={data.skillsIcon.childImageSharp.fixed} alt="skills icon" />
               <ButtonName>{intl.formatMessage({ id: "skills" })}</ButtonName>
             </NavigationLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/">
+            <NavigationLink image={data.afterMenu.childImageSharp.fixed.src} to="/#contact">
               <AccountIcon  fixed={data.emailIcon.childImageSharp.fixed}  alt="contact icon" />
               <ButtonName>{intl.formatMessage({ id: "contact" })}</ButtonName>
             </NavigationLink>

@@ -242,6 +242,7 @@ export const VisitButton = styled.a`
   display: flex;
   align-items:center;
   justify-content:center;
+  text-decoration:none;
   grid-column: 2/3;
   grid-row: 3/4;
 

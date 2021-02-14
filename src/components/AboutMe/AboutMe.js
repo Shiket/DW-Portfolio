@@ -9,9 +9,9 @@ export const AboutMe = () => {
 
     return (
       <>
-        <AvatarImg fluid={data.avatar.childImageSharp.fluid} alt="avatar"/>
+        <AvatarImg fluid={data.avatar.childImageSharp.fluid} alt="avatar" id="about"/>
         <MainHeading image={data.beforeTitle.childImageSharp.fixed.src}>
-           {intl.formatMessage({ id: "heading" })} &#128516;
+           {intl.formatMessage({ id: "heading" })}
         </MainHeading>
         <IconsGridWrapper>
           <ItemWrapper>

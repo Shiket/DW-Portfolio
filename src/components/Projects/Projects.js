@@ -19,7 +19,7 @@ export const Projects = () => {
           <path fill="#252525" d="M1652,0s-163,43.43-547.5,64.5c-292,16-379.84-48.93-713,0C320,75,0,109,0,109H1652Z"/>
           <path fill="#252525" d="M2,74.24s39,30.36,222,11c104-11,67.33,23.76,67.33,23.76H2Z"/>
       </StyledSVG>
-      <ProjectsWrapper>
+      <ProjectsWrapper id="projects">
           <SectionName>PROJECTS</SectionName>
           <Line />
           <ProjectName>FOOTBALL-APP</ProjectName>
