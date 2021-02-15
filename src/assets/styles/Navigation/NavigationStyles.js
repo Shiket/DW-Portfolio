@@ -55,7 +55,6 @@ export const NavigationWrapper = styled.nav`
 export const NavigationItem = styled.li`
   height: 100%;
   margin: ${props => (props.title ? "10vh 0 15vh 0" : "30px 0 30px 0")};
-  padding-left: ${props => (props.title ? "0px" : "30px")};
   background-color: ${props => (props.title ? "#E04040" : "#00A5A5")};
 
 
@@ -63,9 +62,6 @@ export const NavigationItem = styled.li`
     margin: ${props => (props.title ? "8vh 0 10vh 0" : "15px 0 20px 0")};
   }
 
-  @media (max-width: 1023px){
-    padding-left: ${props => (props.title ? "0px" : "0px")};
-  }
 `
 
 export const NavigationLink = styled(Link)`
@@ -77,6 +73,7 @@ export const NavigationLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: ${props => (props.title ? "0px" : "30px")};
   font-size: ${props => (props.title ? "32px" : "18px")};
   font-weight: ${props => (props.title ? "700" : "300")};
   justify-content: ${props => (props.title ? "center" : "flex-start")};
@@ -102,6 +99,7 @@ export const NavigationLink = styled(Link)`
   @media (max-width:1023px){
     font-size: ${props => (props.title ? "19px" : "14px")};
     flex-direction:column;
+    padding-left: ${props => (props.title ? "0px" : "0px")};
     align-items:center;
     ::after{
       display:none;
