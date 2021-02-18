@@ -7,6 +7,9 @@ height:100%;
 background-color: #fff;
 margin-bottom:140px;
 
+@media(max-width:1500px){
+  padding-top:55px;
+}
 @media(max-width: 1023px){
   padding: 0 0 0 0;
   margin-bottom: 80px;
@@ -69,6 +72,10 @@ font-size:18px;
 width:400px;
 height:65px;
 
+@media(max-width: 1920px){
+  height:60px;
+}
+
 @media(max-width: 1150px){
   width:350px;
 }
@@ -87,6 +94,11 @@ width:41px;
 height:41px;
 margin-left:36px;
 
+@media(max-width: 1920px){
+  margin-left:39px;
+  height: 38px;
+  width:38px;
+}
 @media(max-width: 1023px){
   margin-left:32px;
 }
