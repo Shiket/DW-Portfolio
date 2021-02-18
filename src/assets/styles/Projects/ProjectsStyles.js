@@ -5,10 +5,19 @@ export const ProjectsWrapper = styled.section`
     height:100%;
     background-color: #252525;
     padding-bottom:50px;
+
+
+    @media(max-width:1500px){
+      padding-top:55px;
+    }
+    @media(max-width: 1023px){
+      padding-top:0px;
+    }
+
 `
 
 export const StyledSVG = styled.svg`
-  margin: 80px 0 -4px -3px;
+  margin: 80px 0 -5px -3px;
 
   @media(max-width: 1500px){
       display:none;
@@ -37,7 +46,7 @@ export const Line = styled.div`
 export const SectionName = styled.div`
     height:58px;
     padding-left:2%;
-    margin-left:80%;
+    margin-left:79%;
     position:relative;
     color: #fff;
     font-weight:700;
@@ -47,11 +56,14 @@ export const SectionName = styled.div`
     display:flex;
     align-items:center;
 
-    @media(max-width:1500px){
+
+    @media(max-width:1750px){
         margin:0 0 0 70%;
         height: 50px;
         font-size:32px;
     }
+
+    
     @media(max-width:1023px){
         margin:0 0 0 0%;
         height: 50px;
@@ -153,7 +165,7 @@ export const ProjectImg = styled(Img)`
       height:410px;
     }
     @media(max-width: 1250px){
-      width:780px;
+      width:765px;
       height:350px;
     }
     @media(max-width: 915px){
