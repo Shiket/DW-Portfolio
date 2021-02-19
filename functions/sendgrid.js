@@ -1,12 +1,12 @@
-const client = require("@sendgrid/mail")
-exports.handler = async function(event, context) {
+const client = require('@sendgrid/mail');
 
 const { SENDGRID_API_KEY, SENDGRID_SENDER_EMAIL } = process.env;
 
-  client.setApiKey(SENDGRID_API_KEY)
-  
-  const { message, email, name } = JSON.parse(event.body);
+exports.handler = async function(event, context, callback) {
 
+  const { message, email, name } = JSON.parse(event.body);
+  client.setApiKey(SENDGRID_API_KEY);
+  
   console.log("passed" + message)
   console.log("passed" + email)
   console.log("passed" + name)
@@ -19,15 +19,16 @@ const { SENDGRID_API_KEY, SENDGRID_SENDER_EMAIL } = process.env;
   };
 
     try {
-      client.send(data);
+      await client.send(data);
       return {
         statusCode:200,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-        },
-        body:'message sent',
+        body:'Message sent',
       };
+        // headers: {
+        //   'Access-Control-Allow-Origin': '*',
+        //   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+        // },
+        // body:'message sent',
     }
     catch (err) {
       return {
