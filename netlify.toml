@@ -1,5 +1,6 @@
 [build]
-    functions = "lambda"
+  publish = "dist"
+  functions = './functions/'
 
 [[headers]]
    for = "/*"
