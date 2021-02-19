@@ -92,7 +92,13 @@ export const ButtonsWrapper = styled.div`
         onSubmit={(values, { setSubmitting }) => {
             console.log(values)
                 try {
-                  axios.post('/.netlify/functions/sendgrid', values)
+                  axios.post('/.netlify/functions/sendgrid', values, {
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+                    }
+                  })
+
                   setSubmitting(false);
                 } catch (e) {
                   console.error(e)
