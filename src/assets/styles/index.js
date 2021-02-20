@@ -6,3 +6,4 @@ export { Icon, IconLabel, ItemWrapper, IconsGridWrapper} from './AboutMe/IconsGr
 export { Description, Border } from './AboutMe/DescriptionStyles'
 export { ProjectIcon, ProjectsWrapper, SectionName, StyledSVG, Line, ProjectContainer, IconWrapper, ProjectImg, ProjectName, ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from './Projects/ProjectsStyles'
 export { Ability, SectionTitle, SkillIcon, SkillsWrapper, TechnologiesWrapper } from './Skills/Skills'
+export { ButtonsWrapper, StyledButton, StyledInput, StyledLabel, FormWrapper } from './Contact/FormStyles'
