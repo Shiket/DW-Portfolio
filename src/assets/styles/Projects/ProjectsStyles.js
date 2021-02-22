@@ -63,7 +63,6 @@ export const SectionName = styled.div`
         font-size:32px;
     }
 
-    
     @media(max-width:1023px){
         margin:0 0 0 0%;
         height: 50px;
@@ -115,10 +114,10 @@ export const ProjectContainer = styled.div`
       grid-template-rows: 260px 300px 110px 100px;
     }
     @media(max-width: 540px){
-      grid-template-rows: 300px 110px 100px;
+      grid-template-rows: 300px 100% 100px;
     }
     @media(max-width: 442px){
-      grid-template-rows: 370px 110px 100px;
+      grid-template-rows: 370px 100% 100px;
     }
 `
 export const ProjectName = styled.p`
@@ -208,6 +207,7 @@ export const ProjectTechnologies = styled.div`
     grid-row: 2/3;
     display:flex;
     justify-content:space-around;
+    flex-wrap:wrap;
     align-items:center;
 
     @media(max-width: 1750px){
@@ -215,6 +215,8 @@ export const ProjectTechnologies = styled.div`
     }
     @media(max-width: 540px){
       grid-row: 2/3;
+      align-items:center;
+      height:100%;
     }
 `
 export const IconWrapper = styled.div`
@@ -225,6 +227,10 @@ export const IconWrapper = styled.div`
     align-items:center;
     justify-content:center;
     color: #fff;
+
+    @media(max-width:500px){
+      width:80px;
+    }
 `
 export const Heading = styled.span`
     font-size:35px;
