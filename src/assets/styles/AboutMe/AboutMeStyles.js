@@ -14,7 +14,7 @@ export const AvatarImg = styled(Img)`
 export const MainHeading = styled.p`
   text-align:center;
   color: #fff;
-  padding-top:10px;
+  padding-top:13px;
   font-size: 26px;
   height:58px;
   position:relative;
@@ -27,7 +27,7 @@ export const MainHeading = styled.p`
     max-width: 900px;
     margin: 60px auto;
     font-size: 29px;
-    padding-top:7px;
+    padding-top:11px;
   }
 
   @media (max-width: 639px){

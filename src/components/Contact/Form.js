@@ -5,7 +5,7 @@ import axios from "axios"
 import { ButtonsWrapper, StyledButton, StyledInput, StyledLabel, FormWrapper} from "../../assets/styles/index"
 
 export const ContactForm = () => {
-  const intl = useIntl()
+  const intl = useIntl();
  return (
     <FormWrapper>
       <Formik
@@ -25,13 +25,14 @@ export const ContactForm = () => {
           try {
             axios.post("/.netlify/functions/sendgrid", values, {
               headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers":
+                  "Access-Control-Allow-Origin": "*",
+                  "Access-Control-Allow-Headers":
                   "Origin, X-Requested-With, Content-Type, Accept",
               },
             })
 
             setSubmitting(false)
+            alert("message has been sent")
           } catch (e) {
             console.error(e)
             alert("Error:  Your message could not be sent")
@@ -72,16 +73,10 @@ export const ContactForm = () => {
               value={values.message}
             />
             <ButtonsWrapper>
-              <StyledButton onClick={( values, {resetForm})=>{
-                  console.log(values);
-                  formik.resetForm({ values: ''})
-              }} empty="true" >
+              <StyledButton empty="true" >
                 {intl.formatMessage({ id: "form-clear" })}
               </StyledButton>
-              <StyledButton onSubmit={( values, {resetForm})=>{
-                  console.log(values);
-                  resetForm({ values: ''})}}
-               type="submit" disabled={isSubmitting}>
+              <StyledButton disabled={isSubmitting}>
                 {intl.formatMessage({ id: "form-submit" })}
               </StyledButton>
             </ButtonsWrapper>

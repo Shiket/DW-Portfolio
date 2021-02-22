@@ -45,7 +45,7 @@ export const ItemWrapper = styled.div`
   width:330px;
 
   @media(max-width: 1400px){
-    width: 280px;
+    width: 300px;
   }
 
   @media(max-width: 1280px){
@@ -54,6 +54,10 @@ export const ItemWrapper = styled.div`
 
   @media(max-width:860px){
     width: 370px;
+  }
+
+  @media(max-width:450px){
+    width:300px;
   }
 `
 
@@ -79,19 +83,11 @@ export const Icon = styled(Img)`
   @media(max-width:860px){
     margin-right:35px;
   }
+
+  @media(max-width:450px){
+    margin-right:15px;
+  }
 `
 export const IconLabel = styled.p`
   font-size: 17px;
-
-  @media(max-width: 1921px){
-    font-size:15px;
-  }
-
-  @media(max-width: 1280px){
-    font-size:18px;
-  }
-
-  @media(max-width:860px){
-    font-size: 20px;
-  }
 `

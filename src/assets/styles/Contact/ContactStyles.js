@@ -67,6 +67,10 @@ export const FooterIcons = styled.div`
   margin: 50px auto 0 auto;
   display:flex;
   justify-content:space-around;
+
+  @media(max-width:450px){
+    width:100%;
+  }
 `
 export const StyledSvg = styled.svg`
   position: absolute;
