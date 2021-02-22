@@ -1,17 +1,21 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import { ProjectIcon, ProjectContainer, IconWrapper, ProjectImg,
     ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from '../../assets/styles/index'
 
 export const KpClaudiaProject = () => {
     const data = useStaticQuery(query);
+    const intl = useIntl()
     return(
         <ProjectContainer reverseOrder >
             <ProjectImg fluid={data.kpclaudia.childImageSharp.fluid} alt="project" />
-            <ProjectDescripton>Witryna Kp Claudia stworzona przy pomocy frameworka Gatsby,
-                który w przeciwieństwie do React'a wspiera pozycjonowanie w Google oraz za pomoca GraphQL optymalizuje wczytywanie grafiki na stronie.
-                Kp Claudia jest witryną wielojęzyczna dzięki czemu jest dostępna dla szarszego grona odbiorców.
-                <Heading>TECHNOLOGIES USED:</Heading>
+            <ProjectDescripton>
+              {intl.formatMessage({ id: "kp-description" })}<br />
+              {intl.formatMessage({ id: "kp-description2" })}
+                <Heading>
+                  {intl.formatMessage({ id: "technologies" })}
+                </Heading>
             </ProjectDescripton>
             <ProjectTechnologies>
             <IconWrapper>
@@ -35,7 +39,9 @@ export const KpClaudiaProject = () => {
                 <p>GraphQL</p>
             </IconWrapper>
             </ProjectTechnologies>
-            <VisitButton as="a" href="https://www.nocleg-wieliczka.com/" rel="noopener noreferrer">VISIT</VisitButton>
+            <VisitButton as="a" href="https://www.nocleg-wieliczka.com/" rel="noopener noreferrer">
+              {intl.formatMessage({ id: "visit" })}
+            </VisitButton>
         </ProjectContainer>
     )
 }

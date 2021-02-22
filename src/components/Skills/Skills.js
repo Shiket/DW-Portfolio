@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import { SectionName, SectionTitle, SkillsWrapper, Ability, SkillIcon, TechnologiesWrapper  } from '../../assets/styles/index'
 //import { MainSkills, OtherSkills, BasicSkills} from '../index'
 
 export const Skills = () => {
-  const technologies = ['JavaScirpt', 'React', 'Gatsby', 'HTML', 'CSS', 'Styled-Components', 'Bootstrap'];
-  const others = ['Git', 'Internationalization', 'Adobe Xd', 'Adobe Photoshop'];
-  const basic = [ 'TypeScript', 'GraphQL', 'Firebase', 'Redux'];
-
+   const intl = useIntl()
    const data = useStaticQuery(query);
+
+   const technologies = ['JavaScirpt', 'React', 'Gatsby', 'HTML', 'CSS', 'Styled-Components', 'Bootstrap'];
+   const others = ['Git', 'Internationalization', 'Adobe Xd', 'Adobe Photoshop'];
+   const basic = [ 'GraphQL', 'TypeScript', 'Firebase', 'Redux'];
+
     return (
       <SkillsWrapper id="skills">
-        <SectionName>SKILLS</SectionName>
-        <SectionTitle>TECHNOLOGIES I KNOW</SectionTitle>
+        <SectionName>{intl.formatMessage({ id: "section-header2" })}</SectionName>
+        <SectionTitle>{intl.formatMessage({ id: "skills-header" })}</SectionTitle>
         <TechnologiesWrapper>
             {data.skillIcons.edges.map(({ node }, index) => (
                 <Ability key={index}>
@@ -21,7 +24,7 @@ export const Skills = () => {
                 </Ability>
                 ))}
         </TechnologiesWrapper>
-        <SectionTitle>BASIC KNOWLEDGE</SectionTitle>
+        <SectionTitle>{intl.formatMessage({ id: "skills-header2" })}</SectionTitle>
         <TechnologiesWrapper>
             {data.basicSkills.edges.map(({ node }, index) => (
                 <Ability key={index}>
@@ -30,7 +33,7 @@ export const Skills = () => {
                 </Ability>
                 ))}
         </TechnologiesWrapper>
-        <SectionTitle>OTHERS</SectionTitle>
+        <SectionTitle>{intl.formatMessage({ id: "skills-header3" })}</SectionTitle>
         <TechnologiesWrapper>
             {data.otherSkills.edges.map(({ node }, index) => (
                 <Ability key={index}>

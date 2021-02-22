@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
 import { SectionName } from '../../assets/styles/index'
 import { ContactForm } from '../index'
@@ -85,16 +86,17 @@ export const ExternalLink = styled.a``
 export const styledPath = styled.path``
 
 export const Contact = () => {
+  const intl = useIntl()
   const data = useStaticQuery(query);
     return (
       <ContactWrapper id="contact">
-        <SectionName>CONTACT</SectionName>
+        <SectionName>{intl.formatMessage({ id: "section-header3" })}</SectionName>
         <ContactForm />
         <InlineWrapper>
           <BottomLine/>
           <InlineElements>
           <StyledSpan>
-            This site was built with Gatsby
+            {intl.formatMessage({ id: "built-with" })}
           </StyledSpan>
           <GatsbyIcon fluid={data.gatsbyIcon.childImageSharp.fluid} alt="icon"/>
           </InlineElements>

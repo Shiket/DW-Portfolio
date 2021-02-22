@@ -1,16 +1,11 @@
 import React from "react"
 import { Formik } from "formik"
+import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
-import {
-  ButtonsWrapper,
-  StyledButton,
-  StyledInput,
-  StyledLabel,
-  FormWrapper,
-} from "../../assets/styles/index"
+import { ButtonsWrapper, StyledButton, StyledInput, StyledLabel, FormWrapper} from "../../assets/styles/index"
 
 export const ContactForm = () => {
-
+  const intl = useIntl()
  return (
     <FormWrapper>
       <Formik
@@ -46,7 +41,7 @@ export const ContactForm = () => {
       >
         {({ values, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
           <form onSubmit={handleSubmit}>
-            <StyledLabel htmlFor="name">Name</StyledLabel>
+            <StyledLabel htmlFor="name">{intl.formatMessage({ id: "form-name" })}</StyledLabel>
             <StyledInput
               type="text"
               name="name"
@@ -66,7 +61,7 @@ export const ContactForm = () => {
               value={values.email}
             />
 
-            <StyledLabel htmlFor="message">Message</StyledLabel>
+            <StyledLabel htmlFor="message">{intl.formatMessage({ id: "form-message" })}</StyledLabel>
             <StyledInput
               as="textarea"
               type="text"
@@ -79,15 +74,15 @@ export const ContactForm = () => {
             <ButtonsWrapper>
               <StyledButton onClick={( values, {resetForm})=>{
                   console.log(values);
-                  resetForm({ values: ''})
+                  formik.resetForm({ values: ''})
               }} empty="true" >
-                CLEAR
+                {intl.formatMessage({ id: "form-clear" })}
               </StyledButton>
               <StyledButton onSubmit={( values, {resetForm})=>{
                   console.log(values);
                   resetForm({ values: ''})}}
                type="submit" disabled={isSubmitting}>
-                SUBMIT
+                {intl.formatMessage({ id: "form-submit" })}
               </StyledButton>
             </ButtonsWrapper>
           </form>
@@ -96,5 +91,3 @@ export const ContactForm = () => {
     </FormWrapper>
   )
 }
-// odpalic lokalnie serwer
-// sprawdzić czy submit resetuje values

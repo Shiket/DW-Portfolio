@@ -1,17 +1,17 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import { ProjectIcon, ProjectContainer, IconWrapper, ProjectImg,
     ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from '../../assets/styles/index'
 
 export const FootballProject = () => {
     const data = useStaticQuery(query);
+    const intl = useIntl()
     return(
         <ProjectContainer>
             <ProjectImg fluid={data.football.childImageSharp.fluid} alt="project"/>
-            <ProjectDescripton>Aplikacja wykorzystująca zewnętrzne API (footbalDatabase API).
-                Stworzona w React, umożliwia sprawdzenie podstawowych informacji (ostatnie, nadchodzące mecze, witryna zespołu, historia itp.) o każdej drużynie z sześciu czołowych lig w Europie.
-                Wszystkie informacje, wyniki i zespoły aktualizowane są automatycznie. Zalogowani użytkownicy mogą dodawać zespoły do ulubionych oraz je usuwać.
-                <Heading>TECHNOLOGIES USED:</Heading>
+            <ProjectDescripton>{intl.formatMessage({ id: "football-description" })}
+                <Heading>{intl.formatMessage({ id: "technologies" })}</Heading>
             </ProjectDescripton>
             <ProjectTechnologies>
             <IconWrapper>
@@ -35,7 +35,7 @@ export const FootballProject = () => {
                 <p>Firebase</p>
             </IconWrapper>
             </ProjectTechnologies>
-            <VisitButton as="a" href="https://shiket.github.io/Football-app/" rel="noopener noreferrer">VISIT</VisitButton>
+            <VisitButton as="a" href="https://shiket.github.io/Football-app/" rel="noopener noreferrer">{intl.formatMessage({ id: "visit" })}</VisitButton>
         </ProjectContainer>
     )
 }

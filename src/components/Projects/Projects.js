@@ -1,16 +1,10 @@
 import React from "react"
-// import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { ProjectsWrapper, SectionName, StyledSVG, Line, ProjectName} from '../../assets/styles/index'
 import { KpClaudiaProject, FootballProject} from '../index'
-import styled from 'styled-components'
 
-export const BigBorder = styled.div`
-  width:100%;
-  height:1080px;
-  background-color: #E04040;
-`
 export const Projects = () => {
-    // const intl = useIntl()
+     const intl = useIntl()
     return (
       <>
       <StyledSVG
@@ -20,7 +14,7 @@ export const Projects = () => {
           <path fill="#252525" d="M2,74.24s39,30.36,222,11c104-11,67.33,23.76,67.33,23.76H2Z"/>
       </StyledSVG>
       <ProjectsWrapper id="projects">
-          <SectionName>PROJECTS</SectionName>
+          <SectionName>{intl.formatMessage({ id: "section-header" })}</SectionName>
           <Line />
           <ProjectName>FOOTBALL-APP</ProjectName>
           <FootballProject />

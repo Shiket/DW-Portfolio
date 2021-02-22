@@ -21,17 +21,17 @@ export const AboutMe = () => {
 
           <ItemWrapper>
             <Icon fluid={data.educationIcon.childImageSharp.fluid} />
-            <IconLabel>University of Economics, Cracow</IconLabel>
+            <IconLabel>{intl.formatMessage({ id: "university" })}</IconLabel>
           </ItemWrapper>
 
           <ItemWrapper>
             <Icon fluid={data.calendarIcon.childImageSharp.fluid} />
-            <IconLabel>25 years old</IconLabel>
+            <IconLabel>{intl.formatMessage({ id: "age" })}</IconLabel>
           </ItemWrapper>
 
           <ItemWrapper>
             <Icon fluid={data.locationIcon.childImageSharp.fluid} />
-            <IconLabel>Wieliczka, Cracow, Poland</IconLabel>
+            <IconLabel>{intl.formatMessage({ id: "location" })}</IconLabel>
           </ItemWrapper>
 
           <ItemWrapper>
@@ -46,11 +46,14 @@ export const AboutMe = () => {
         </IconsGridWrapper>
 
         <Border/>
-        <Description>Ukończyłem studia magisterskie na Uniwersytecie Ekonomicznym w Krakowie o kierunku Informatyka stosowana.<br />
-        Zajmuję się frontendem, głównie biblioteką React, ostatnio gatsby, i w tym kierunku planuje dalszy rozwój. <br />
-        Moim głównym projektem w portfolio jest aplikaja "JEAJSABDAJXZS". <br />
-        Wszystkie moje projekty (wizualnie oraz kod) tworzyłem samodzielnie. Dlatego są beznadziejne <br />
-        trochę więcej tekstu by się przydalo placeholder lorem ip
+        <Description>
+        {intl.formatMessage({ id: "about" })} <br />
+        {intl.formatMessage({ id: "about1" })} <br />
+        {intl.formatMessage({ id: "about2" })} <br />
+        {intl.formatMessage({ id: "about3" })}<br />
+        {intl.formatMessage({ id: "about4" })} <br />
+        {intl.formatMessage({ id: "about5" })}
+        
         </Description>
         <Border bottom/>
       </>
