@@ -114,12 +114,36 @@ export const ProjectContainer = styled.div`
       grid-template-rows: 260px 300px 110px 100px;
     }
     @media(max-width: 540px){
-      grid-template-rows: 300px 100% 100px;
+      grid-template-rows: 300px 110px 100px;
     }
-    @media(max-width: 442px){
-      grid-template-rows: 370px 100% 100px;
+    @media(max-width: 467px){
+      grid-template-rows: 370px 220px 100px;
     }
 `
+export const ProjectTechnologies = styled.div`
+    height: 110px;
+    width:100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    grid-row: 2/3;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    align-items:center;
+
+    @media(max-width: 1750px){
+      grid-row: 3/4;
+    }
+    @media(max-width: 540px){
+      grid-row: 2/3;
+      align-items:center;
+      height:110px;
+    }
+    @media(max-width:467px){
+      height:220px;
+    }
+`
+
 export const ProjectName = styled.p`
     font-weight: 700;
     font-size: 55px;
@@ -197,29 +221,6 @@ export const ProjectDescripton = styled.p`
     @media(max-width: 540px){
       font-size: 19px;
       grid-row: 1/2;
-    }
-`
-export const ProjectTechnologies = styled.div`
-    height: 110px;
-    width:100%;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    grid-row: 2/3;
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    align-items:center;
-
-    @media(max-width: 1750px){
-      grid-row: 3/4;
-    }
-    @media(max-width: 540px){
-      grid-row: 2/3;
-      align-items:center;
-      height:110px;
-    }
-    @media(max-width:467px){
-      height:220px;
     }
 `
 export const IconWrapper = styled.div`
