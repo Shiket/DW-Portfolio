@@ -28,8 +28,6 @@ export const FlagsWrapper = styled.div`
     margin: 5px 0 0 32px;
 }
 @media(max-width: 639px){
-    bottom:0;
-    left:0;
-    margin: 0 0 5px 10px;
+    margin: 5px 0 0 10px;
 }
 `

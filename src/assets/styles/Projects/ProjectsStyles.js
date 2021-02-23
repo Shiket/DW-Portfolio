@@ -216,7 +216,10 @@ export const ProjectTechnologies = styled.div`
     @media(max-width: 540px){
       grid-row: 2/3;
       align-items:center;
-      height:100%;
+      height:110px;
+    }
+    @media(max-width:467px){
+      height:220px;
     }
 `
 export const IconWrapper = styled.div`

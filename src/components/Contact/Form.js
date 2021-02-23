@@ -73,9 +73,9 @@ export const ContactForm = () => {
               value={values.message}
             />
             <ButtonsWrapper>
-              <StyledButton empty="true" >
+              {/* <StyledButton empty="true" >
                 {intl.formatMessage({ id: "form-clear" })}
-              </StyledButton>
+              </StyledButton> */}
               <StyledButton disabled={isSubmitting}>
                 {intl.formatMessage({ id: "form-submit" })}
               </StyledButton>
