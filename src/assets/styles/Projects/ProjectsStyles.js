@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-
 export const ProjectsWrapper = styled.section`
     height:100%;
     background-color: #252525;
@@ -114,7 +113,7 @@ export const ProjectContainer = styled.div`
       grid-template-rows: 260px 300px 110px 100px;
     }
     @media(max-width: 540px){
-      grid-template-rows: 300px 110px 100px;
+      grid-template-rows: 300px 110px 80px;
     }
     @media(max-width: 467px){
       grid-template-rows: 370px 220px 100px;
@@ -288,5 +287,9 @@ export const VisitButton = styled.a`
   @media(max-width: 540px){
     grid-row:3/4;
   }
+`
 
+export const VisitWrapper = styled.div`
+  display:flex;
+  align-items:center;
 `

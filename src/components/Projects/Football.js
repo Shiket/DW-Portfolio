@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { ProjectIcon, ProjectContainer, IconWrapper, ProjectImg,
-    ProjectTechnologies, VisitButton, Heading, ProjectDescripton } from '../../assets/styles/index'
+    ProjectTechnologies, VisitButton, Heading, ProjectDescripton, VisitWrapper } from '../../assets/styles/index'
 
 export const FootballProject = () => {
     const data = useStaticQuery(query);
@@ -35,7 +35,9 @@ export const FootballProject = () => {
                 <p>Firebase</p>
             </IconWrapper>
             </ProjectTechnologies>
-            <VisitButton as="a" href="https://shiket.github.io/Football-app/" rel="noopener noreferrer">{intl.formatMessage({ id: "visit" })}</VisitButton>
+            <VisitWrapper>
+              <VisitButton as="a" href="https://shiket.github.io/Football-app/" rel="noopener noreferrer">{intl.formatMessage({ id: "visit" })}</VisitButton>
+            </VisitWrapper>
         </ProjectContainer>
     )
 }
