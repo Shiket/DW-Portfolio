@@ -41,7 +41,7 @@ export const AboutMe = () => {
 
          <ItemWrapper>
             <Icon fluid={data.cvIcon.childImageSharp.fluid} />
-            <IconLabel>Curriculum Vitae (CV)</IconLabel>
+            <IconLabel as="a" href="https://drive.google.com/file/d/1BHGOoxSMc2SlZQkZsEnL8J3HPqA45pBB/view?usp=sharing" target="_blank" rel="noopener noreferrer">Curriculum Vitae (CV)</IconLabel>
          </ItemWrapper>
         </IconsGridWrapper>
 

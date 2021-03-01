@@ -11,6 +11,9 @@ export const StyledInput = styled.input`
     color: #fff;
     margin-bottom:30px;
 
+    :focus{
+        outline:none;
+    }
 
     @media(max-width:1200px){
         margin-bottom:20px;
