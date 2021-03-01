@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dominik Wrona - Portfolio`,
+    description: `Dominik Wrona, portfolio website, projects, skills, contact`,
+    author: `@Dominik Wrona`,
   },
   plugins: [
     {
@@ -10,6 +10,7 @@ module.exports = {
       options: {
         trackingId: "G-NS8Y68CCDB",
         head: true,
+        anonymize: true,
       },
     },
     `gatsby-plugin-react-helmet`,
